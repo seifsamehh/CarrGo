@@ -1,0 +1,10 @@
+.sub-footer {
+  background-color: #383939;
+  color: #fff;
+}
+@media screen and (max-width: 1024px) {
+  .sub-footer {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}/*# sourceMappingURL=subFooter.css.map */

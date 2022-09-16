@@ -1,0 +1,56 @@
+// start global variables
+$main-color: #fecc18;
+$sec-color: #3d3e3e;
+$light: #fff;
+$dark: #000;
+// end global variables
+.blog {
+    overflow: hidden;
+    .boxs {
+        margin-left: 2rem;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            margin-left: 0;
+            gap: 2rem;
+        }
+    }
+    .box-1,
+    .box-2,
+    .box-3 {
+        width: 100%;
+        object-fit:contain;
+        transform-origin:center;
+        transform:perspective(800px) rotateY(25deg);
+        transition:0.5s;
+        @media screen and (max-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        p,
+        a {
+            @media screen and (max-width: 768px) {
+                text-align: center;
+            }
+        }
+        span,
+        h5 {
+            color: $main-color;
+        }
+        img {
+            width: 80%;
+        }
+      }
+      .boxs:hover .box-1,
+      .boxs:hover .box-2,
+      .boxs:hover .box-3 {
+        opacity:0.3;
+      }
+      .boxs .box-1:hover,
+      .boxs .box-2:hover,
+      .boxs .box-3:hover {
+        transform:perspective(800px) rotateY(0deg);
+        opacity:1;
+      }
+}

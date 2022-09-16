@@ -1,0 +1,28 @@
+.feedback {
+  background-image: url("../../../images/background.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+.feedback .swiper {
+  width: 340px;
+  height: 420px;
+}
+@media screen and (max-width: 768px) {
+  .feedback .swiper {
+    width: 240px;
+    height: 340px;
+  }
+}
+.feedback .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}/*# sourceMappingURL=feedback.css.map */

@@ -1,0 +1,91 @@
+// start global variables
+$main-color: #fecc18;
+$sec-color: #3d3e3e;
+$light: #fff;
+$dark: #000;
+// end global variables
+.trust {
+    background-image: url('../../../images/radiant-gradient.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 12rem;
+    }
+    button {
+        position: relative;
+        border: none;
+        background: transparent;
+        padding: 0;
+        cursor: pointer;
+        outline-offset: 4px;
+        transition: filter 250ms;
+        user-select: none;
+        touch-action: manipulation;
+    }
+    .shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        background: hsl(0deg 100% 100% / 0.25);
+        will-change: transform;
+        transform: translateY(2px);
+        transition: transform
+        600ms
+        cubic-bezier(.3, .7, .4, 1);
+    }
+    .edge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        background-color: #bb9300;
+    }
+    .front {
+        display: block;
+        position: relative;
+        padding: 12px 27px;
+        border-radius: 12px;
+        font-size: 1.1rem;
+        color: $main-color;
+        background: $light;
+        will-change: transform;
+        transform: translateY(-4px);
+        transition: transform
+        600ms
+        cubic-bezier(.3, .7, .4, 1);
+    }
+    button:hover {
+        filter: brightness(110%);
+    }
+    button:hover .front {
+        transform: translateY(-6px);
+        transition: transform
+        250ms
+        cubic-bezier(.3, .7, .4, 1.5);
+    }
+    button:active .front {
+        transform: translateY(-2px);
+        transition: transform 34ms;
+    }
+    button:hover .shadow {
+        transform: translateY(4px);
+        transition: transform
+        250ms
+        cubic-bezier(.3, .7, .4, 1.5);
+    }
+    button:active .shadow {
+        transform: translateY(1px);
+        transition: transform 34ms;
+    }
+    button:focus:not(:focus-visible) {
+        outline: none;
+    }
+}

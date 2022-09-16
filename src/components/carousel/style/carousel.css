@@ -1,0 +1,116 @@
+.carousell .swiper {
+  width: 100%;
+  height: 100vh;
+}
+.carousell .swiper-slide {
+  background: #fecc18;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .carousell .swiper-slide .page-1,
+.carousell .swiper-slide .page-2,
+.carousell .swiper-slide .page-3 {
+    flex-direction: column;
+  }
+}
+.carousell .swiper-slide .page-1 .content button,
+.carousell .swiper-slide .page-2 .content button,
+.carousell .swiper-slide .page-3 .content button {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  touch-action: manipulation;
+}
+.carousell .swiper-slide .page-1 .content .shadow,
+.carousell .swiper-slide .page-2 .content .shadow,
+.carousell .swiper-slide .page-3 .content .shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsla(0deg, 100%, 100%, 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+.carousell .swiper-slide .page-1 .content .edge,
+.carousell .swiper-slide .page-2 .content .edge,
+.carousell .swiper-slide .page-3 .content .edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-color: #bb9300;
+}
+.carousell .swiper-slide .page-1 .content .front,
+.carousell .swiper-slide .page-2 .content .front,
+.carousell .swiper-slide .page-3 .content .front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: #fecc18;
+  background: #fff;
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+.carousell .swiper-slide .page-1 .content button:hover,
+.carousell .swiper-slide .page-2 .content button:hover,
+.carousell .swiper-slide .page-3 .content button:hover {
+  filter: brightness(110%);
+}
+.carousell .swiper-slide .page-1 .content button:hover .front,
+.carousell .swiper-slide .page-2 .content button:hover .front,
+.carousell .swiper-slide .page-3 .content button:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+.carousell .swiper-slide .page-1 .content button:active .front,
+.carousell .swiper-slide .page-2 .content button:active .front,
+.carousell .swiper-slide .page-3 .content button:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+.carousell .swiper-slide .page-1 .content button:hover .shadow,
+.carousell .swiper-slide .page-2 .content button:hover .shadow,
+.carousell .swiper-slide .page-3 .content button:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+.carousell .swiper-slide .page-1 .content button:active .shadow,
+.carousell .swiper-slide .page-2 .content button:active .shadow,
+.carousell .swiper-slide .page-3 .content button:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+.carousell .swiper-slide .page-1 .content button:focus:not(:focus-visible),
+.carousell .swiper-slide .page-2 .content button:focus:not(:focus-visible),
+.carousell .swiper-slide .page-3 .content button:focus:not(:focus-visible) {
+  outline: none;
+}
+.carousell .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background-color: #fff;
+}
+.carousell .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=carousel.css.map */

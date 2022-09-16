@@ -1,0 +1,32 @@
+.works .title {
+  color: #000;
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+.works section {
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .works section {
+    flex-direction: column;
+  }
+}
+.works .first-step,
+.works .third-step {
+  background-color: #fff;
+}
+.works .first-step .image,
+.works .third-step .image {
+  background-color: #fecc18;
+  box-shadow: rgba(0, 0, 0, 0.4) -5px 5px, rgba(0, 0, 0, 0.3) -10px 10px, rgba(0, 0, 0, 0.2) -15px 15px, rgba(0, 0, 0, 0.1) -20px 20px, rgba(0, 0, 0, 0.05) -25px 25px;
+}
+.works .second-step,
+.works .fourth-step {
+  background-color: #fecc18;
+}
+.works .second-step .image,
+.works .fourth-step .image {
+  background-color: #fff;
+  box-shadow: rgba(255, 255, 255, 0.4) -5px 5px, rgba(255, 255, 255, 0.3) -10px 10px, rgba(255, 255, 255, 0.2) -15px 15px, rgba(255, 255, 255, 0.1) -20px 20px, rgba(255, 255, 255, 0.05) -25px 25px;
+}/*# sourceMappingURL=works.css.map */

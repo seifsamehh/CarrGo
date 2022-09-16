@@ -1,0 +1,159 @@
+header {
+  box-shadow: rgba(254, 204, 24, 0.4) 0px 5px, rgba(254, 204, 24, 0.3) 0px 10px, rgba(254, 204, 24, 0.2) 0px 15px, rgba(254, 204, 24, 0.1) 0px 20px, rgba(254, 204, 24, 0.05) 0px 25px;
+  /* styling of Input */
+  /* styling of animated border */
+  /* Hover on Input */
+  /* here is code of animated border */
+  /* styling of close button */
+  /* == you can click the close button to remove text == */
+  /* close button shown when typing */
+  /* sizing svg icons */
+}
+@media screen and (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+header .form button {
+  border: none;
+  background: none;
+  color: #000;
+}
+header .form {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: #fecc18;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg, #fff);
+}
+header .form img {
+  width: 15%;
+}
+header .input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  border: none !important;
+  outline: none !important;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media screen and (max-width: 768px) {
+  header .input {
+    font-size: 0.7rem;
+  }
+}
+header .form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+header .form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+header input:focus {
+  outline: none;
+}
+header .form:focus-within:before {
+  transform: scale(1);
+}
+header .reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+header input:not(:-moz-placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+header input:not(:-ms-input-placeholder) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+header input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+header .form svg {
+  width: 17px;
+  margin-top: 3px;
+}
+@media screen and (max-width: 768px) {
+  header .lg-screen {
+    flex-wrap: wrap;
+  }
+}
+header .lg-screen .link {
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  white-space: nowrap;
+}
+header .lg-screen .link::before,
+header .lg-screen .link::after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #fecc18;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+header .lg-screen .link::before {
+  content: "";
+  /* show by default */
+}
+header .lg-screen .link--elara {
+  font-size: 1rem;
+}
+header .lg-screen .link--elara::before {
+  transform-origin: 50% 100%;
+  transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.3s;
+  transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+  transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.3s;
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+          clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+}
+header .lg-screen .link--elara:hover::before {
+  transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
+          clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
+}
+header .lg-screen .link--elara span {
+  transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+}
+header .lg-screen .link--elara:hover span {
+  transform: translate3d(0, -2px, 0);
+}
+header .media .drawer-toggle:checked ~ .drawer-side {
+  overflow: hidden !important;
+}
+header .media .drawer-side ul {
+  background-color: #fecc18;
+}/*# sourceMappingURL=header.css.map */

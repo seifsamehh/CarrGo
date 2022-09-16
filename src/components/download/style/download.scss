@@ -1,0 +1,28 @@
+// start global variables
+$main-color: #fecc18;
+$sec-color: #3d3e3e;
+$light: #fff;
+$dark: #000;
+// end global variables
+.download {
+    overflow: hidden;
+    .title {
+        color: $dark;
+        -webkit-text-fill-color: $light;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $dark;
+        @media screen and (max-width: 768px) {
+            font-size: 3.6rem;
+        }
+    }
+    .content {
+        @media screen and (max-width: 768px) {
+            flex-direction: column-reverse;
+        }
+        .right {
+            @media screen and (max-width: 768px) {
+                margin-left: 2rem;
+            }
+        }
+    }
+}

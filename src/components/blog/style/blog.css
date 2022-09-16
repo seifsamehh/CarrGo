@@ -1,0 +1,67 @@
+.blog {
+  overflow: hidden;
+}
+.blog .boxs {
+  margin-left: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .blog .boxs {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 2rem;
+  }
+}
+.blog .box-1,
+.blog .box-2,
+.blog .box-3 {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform-origin: center;
+  transform: perspective(800px) rotateY(25deg);
+  transition: 0.5s;
+}
+@media screen and (max-width: 768px) {
+  .blog .box-1,
+.blog .box-2,
+.blog .box-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blog .box-1 p,
+.blog .box-1 a,
+.blog .box-2 p,
+.blog .box-2 a,
+.blog .box-3 p,
+.blog .box-3 a {
+    text-align: center;
+  }
+}
+.blog .box-1 span,
+.blog .box-1 h5,
+.blog .box-2 span,
+.blog .box-2 h5,
+.blog .box-3 span,
+.blog .box-3 h5 {
+  color: #fecc18;
+}
+.blog .box-1 img,
+.blog .box-2 img,
+.blog .box-3 img {
+  width: 80%;
+}
+.blog .boxs:hover .box-1,
+.blog .boxs:hover .box-2,
+.blog .boxs:hover .box-3 {
+  opacity: 0.3;
+}
+.blog .boxs .box-1:hover,
+.blog .boxs .box-2:hover,
+.blog .boxs .box-3:hover {
+  transform: perspective(800px) rotateY(0deg);
+  opacity: 1;
+}/*# sourceMappingURL=blog.css.map */

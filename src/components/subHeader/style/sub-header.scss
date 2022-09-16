@@ -1,0 +1,152 @@
+// start global variables
+$main-color: #fecc18;
+$sec-color: #3d3e3e;
+$light: #fff;
+$dark: #000;
+// end global variables
+.sub-header {
+    background-color: $sec-color;
+    color: $light;
+    background-image: url('../../../images/taxi-stripe.webp');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    overflow: hidden;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+    .left-part {
+        nav {
+            @media screen and (max-width: 768px) {
+                flex-wrap: wrap;
+            }
+        }
+        .link {
+            cursor: pointer;
+            font-size: 1rem;
+            position: relative;
+            white-space: nowrap;
+            ul {
+                background-color: $sec-color;
+                li {
+                    color: $light;
+                }
+            }
+        }
+        .active {
+            color: $main-color;
+        }
+        .link::before,
+        .link::after {
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: $main-color;
+            top: 100%;
+            left: 0;
+            pointer-events: none;
+        }
+        
+        .link::before {
+            content: '';
+            /* show by default */
+        }
+        .link--elara {
+            font-size: 1rem;
+        }
+        
+        .link--elara::before {
+            transform-origin: 50% 100%;
+            transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+            clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+        }
+        
+        .link--elara:hover::before {
+            transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
+            clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
+        }
+        
+        .link--elara span {
+            transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+        }
+        
+        .link--elara:hover span {
+            transform: translate3d(0, -2px, 0);
+        }
+    }
+    .right-part {
+        button {
+            position: relative;
+            border: none;
+            background: transparent;
+            padding: 0;
+            cursor: pointer;
+            outline-offset: 4px;
+            transition: filter 250ms;
+            user-select: none;
+            touch-action: manipulation;
+        }
+        .shadow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            background: hsl(0deg 100% 100% / 0.25);
+            will-change: transform;
+            transform: translateY(2px);
+            transition: transform
+            600ms
+            cubic-bezier(.3, .7, .4, 1);
+        }
+        .edge {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            background-color: #bb9300;
+        }
+        .front {
+            display: block;
+            position: relative;
+            padding: 12px 27px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            color: $light;
+            background: $main-color;
+            will-change: transform;
+            transform: translateY(-4px);
+            transition: transform
+            600ms
+            cubic-bezier(.3, .7, .4, 1);
+        }
+        button:hover {
+            filter: brightness(110%);
+        }
+        button:hover .front {
+            transform: translateY(-6px);
+            transition: transform
+            250ms
+            cubic-bezier(.3, .7, .4, 1.5);
+        }
+        button:active .front {
+            transform: translateY(-2px);
+            transition: transform 34ms;
+        }
+        button:hover .shadow {
+            transform: translateY(4px);
+            transition: transform
+            250ms
+            cubic-bezier(.3, .7, .4, 1.5);
+        }
+        button:active .shadow {
+            transform: translateY(1px);
+            transition: transform 34ms;
+        }
+        button:focus:not(:focus-visible) {
+            outline: none;
+        }
+    }
+}

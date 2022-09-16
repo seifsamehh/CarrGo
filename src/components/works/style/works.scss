@@ -1,0 +1,36 @@
+// start global variables
+$main-color: #fecc18;
+$sec-color: #3d3e3e;
+$light: #fff;
+$dark: #000;
+// end global variables
+.works {
+    .title {
+        color: $dark;
+        -webkit-text-fill-color: $light;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $dark;
+    }
+    section {
+        overflow: hidden;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+    .first-step,
+    .third-step {
+        background-color: $light;
+        .image {
+            background-color: $main-color;
+            box-shadow: rgba(0, 0, 0, 0.4) -5px 5px, rgba(0, 0, 0, 0.3) -10px 10px, rgba(0,0,0, 0.2) -15px 15px, rgba(0,0,0, 0.1) -20px 20px, rgba(0,0,0, 0.05) -25px 25px;
+        }
+    }
+    .second-step,
+    .fourth-step {
+        background-color: $main-color;
+        .image {
+            background-color: $light;
+            box-shadow: rgba(255, 255, 255, 0.4) -5px 5px, rgba(255,255,255, 0.3) -10px 10px, rgba(255,255,255, 0.2) -15px 15px, rgba(255,255,255, 0.1) -20px 20px, rgba(255,255,255, 0.05) -25px 25px;
+        }
+    }
+}

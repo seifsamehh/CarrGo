@@ -1,0 +1,32 @@
+// start global variables
+$main-color: #fecc18;
+$sec-color: #3d3e3e;
+$light: #fff;
+$dark: #000;
+// end global variables
+.feedback {
+    background-image: url('../../../images/background.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    .swiper {
+        width: 340px;
+        height: 420px;
+        @media screen and (max-width: 768px) {
+            width: 240px;
+            height: 340px;
+        }
+    }
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+        background-color: $light;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}

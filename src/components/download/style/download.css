@@ -1,0 +1,24 @@
+.download {
+  overflow: hidden;
+}
+.download .title {
+  color: #000;
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+@media screen and (max-width: 768px) {
+  .download .title {
+    font-size: 3.6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .download .content {
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 768px) {
+  .download .content .right {
+    margin-left: 2rem;
+  }
+}/*# sourceMappingURL=download.css.map */
